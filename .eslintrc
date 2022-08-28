@@ -1,0 +1,94 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "airbnb",
+        "prettier",
+        "plugin:react/recommended",
+        "eslint:recommended"
+    ],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "moduleDirectory": [
+                    "node_modules",
+                    "src/"
+                ]
+            }
+        }
+    },
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "impliedStrict": true,
+            "jsx": true
+        },
+        "ecmaVersion": 12
+    },
+    "plugins": [
+        "prettier",
+        "react",
+        "react-hooks"
+    ],
+    "rules": {
+        "react/function-component-definition": [
+            2,
+            {
+                "namedComponents": "arrow-function",
+                "unnamedComponents": "arrow-function"
+            }
+        ],
+        "react/jsx-filename-extension": 0,
+        "default-param-last": 0,
+        "no-param-reassign": 0,
+        "react/no-unstable-nested-components": 0,
+        "react/prop-types": 0,
+        "react/react-in-jsx-scope": 0,
+        "react/require-default-props": 0,
+        "react/no-array-index-key": 0,
+        "react/jsx-props-no-spreading": 0,
+        "react/forbid-prop-types": 0,
+        "react/display-name": 0,
+        "import/order": 0,
+        "no-console": 0,
+        "jsx-a11y/anchor-is-valid": 0,
+        "prefer-destructuring": 0,
+        "jsx-a11y/control-has-associated-label": 0,
+        "no-unsafe-optional-chaining": 0,
+        "prefer-regex-literals": 0,
+        "no-shadow": 0,
+        "react/jsx-no-useless-fragment": 0,
+        "react/button-has-type": 0,
+        "no-unused-vars": [
+            1,
+            {
+                "ignoreRestSiblings": true
+            }
+        ],
+        "prettier/prettier": [
+            2,
+            {
+                "arrowParens": "avoid",
+                "bracketSpacing": true,
+                "printWidth": 120,
+                "singleQuote": true,
+                "trailingComma": "none",
+                "tabWidth": 4,
+                "useTabs": false,
+                "endOfLine": "auto",
+                "overrides": [
+                    {
+                        "files": "*.json",
+                        "options": {
+                            "printWidth": 200
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
